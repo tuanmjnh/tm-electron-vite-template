@@ -1,0 +1,46 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": [
+    "src/renderer/src/typings/*.d.ts",
+    "src/renderer/src/assets/*",
+    "src/renderer/src/**/*",
+    "src/renderer/src/**/*.vue",
+    "src/preload/*.d.ts",
+    "src/interfaces",
+    "src/services/*",
+    "src/utils/*",
+    "src/renderer/build"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/renderer/src/*"
+      ],
+      "@src/*": [
+        "src/*"
+      ],
+      "@renderer/*": [
+        "src/renderer/src/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@interfaces/*": [
+        "src/interfaces/*"
+      ],
+    },
+    "types": [
+      "vite/client",
+      // "element-plus/global",
+      "chrome"
+    ],
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  }
+}

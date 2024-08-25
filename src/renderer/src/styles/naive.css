@@ -1,0 +1,8 @@
+.n-modal-mask {
+  backdrop-filter: blur(2px);
+}
+
+/* Solve the problem that the tabs component does not fit the bottom edge */
+.v-x-scroll {
+  height: 100%;
+}
